@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <meta name="description" content="mi primer formulario"/>
+    <meta name="keyboards" content="formularios"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+    <h1>Formulario HTML5</h1>
+    <form action="formulario.php" method="post">
+    <fieldset>
+        <legend>Datos</legend>
+        <div class="cont1">
+            <label for="mail">Correo electronico</label>
+            <form autocomplete="on">
+            <input type="email" id="email" name="email" autocomplete="off" placeholder="nombre@gmail.com" size="30" required="required" autofocus>
+            <br>
+            <br>
+            <label for="web">Web</label>
+            <input type="url" id="web" name="web" placeholder="http://www.ejemplo.com" size="50" required="required">
+            <br>
+            <br>        
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend> Dirección</legend>
+        <div class="cont2">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="nombre y apellidos" size="50">
+            <br>
+            <br>
+            <label for="direccion">Dirección</label>
+            <textarea name="direccion" id="direccion" placeholder="calle, número, ciudad" cols="50" rows="2" required="required"></textarea>
+            <br>
+            <br>
+            <label for="codigopostal">Código Postal</label>
+            <input type="text" patterrn="(0-9){5}" id="codigopostal" placeholder="cinco digitos" required="required">
+            <br>
+            <br>
+            <label for="Estado">Ciudad</label>
+            <select name="Estado" id="ciudad" required="required">
+                <option value="SR">Sonora</option>
+                <option value="GD">Guadalajara</option>
+                <option value="QROO" selected>Quintana Roo</option>
+            </select>
+            <br>
+            <br>
+            <label for="telefono">Número de teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required="required" placeholder="teléfono con prefijo">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Detalle Tarjeta</legend>
+        <div class="cont3">
+            <label for="tarjeta">Número Tarjeta</label>
+            <input type="number" id="tarjeta" name="tarjeta" required="required" placeholder="Delante de la tarjeta" >
+            <br>
+            <br>
+            <label for="cvv">Codigo Valor de Verificación</label>
+            <input type="number" id="cvv" name="cvv" required="required" placeholder="3 dígitos" max="999">
+            <br>
+            <br>
+            <label for="caducidad">Fecha Caducidad</label>
+            <input type="month" id="caducidad" name="caducidad" required="required">
+            <br>
+            <br>
+        </div>
+    </fieldset>
+    <br>
+    <input class="boton2" type="submit" value="Enviar" >
+    <input class="boton2" type="Reset" value="Borrar" >
+    </form>
+</body>
+</html>
